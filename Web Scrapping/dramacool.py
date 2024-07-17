@@ -1,9 +1,11 @@
 import requests
 from bs4 import BeautifulSoup
-import csv
 
-# Making a GET request
-r = requests.get('https://asianc.sh/')
+import pandas as pd
+
+
+print(f"Scraping page:1...")# Making a GET request
+r = requests.get('https://asianc.sh/recently-added-movie')
 
 
 # Parsing the HTML
@@ -18,11 +20,10 @@ realise_time = s.find_all('span', class_="time")
 #     print(i.text)
 
 data = []
-fields = ["No", "Title", "Subtitle", "Realise Time"]
+fields = ["Title", "Subtitle", "Realise Time"]
 
 for i in range(len(movie_title)):
     dic = {
-        "No": i+1,
         "Title": movie_title[i].text,
         "Subtitle": sub_type[i].text,
         "Realise Time": realise_time[i].text
@@ -30,14 +31,35 @@ for i in range(len(movie_title)):
 
     data.append(dic)
 
-filename = "daramacool_movies.csv"
+page_num = 20
 
-with open(filename, 'w') as csvfile:
-
-    writer = csv.DictWriter(csvfile, fieldnames= fields)
-
-    writer.writeheader()
-    writer.writerows(data)
+for i in range(2,page_num+1):
+    print(f"Scraping page:{i}...")
+    r = requests.get(f'https://asianc.sh/recently-added-movie?page={i}')
 
 
-    
+    # Parsing the HTML
+    soup = BeautifulSoup(r.content, 'html.parser')
+
+    s = soup.find('ul', class_='switch-block list-episode-item')
+    movie_title = s.find_all('h3')
+    sub_type = s.find_all('span', class_=["type RAW", "type SUB"])
+    realise_time = s.find_all('span', class_="time")
+
+
+    for i in range(len(movie_title)):
+        dic = {
+            "Title": movie_title[i].text,
+            "Subtitle": sub_type[i].text,
+            "Realise Time": realise_time[i].text
+        }
+
+        data.append(dic)
+
+
+df = pd.DataFrame(data)
+df.to_csv('movies.csv')
+
+print("Task Completed!!!")
+
+
