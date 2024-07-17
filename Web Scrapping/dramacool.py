@@ -31,7 +31,7 @@ for i in range(len(movie_title)):
 
     data.append(dic)
 
-page_num = 20
+page_num = 50
 
 for i in range(2,page_num+1):
     print(f"Scraping page:{i}...")
@@ -58,7 +58,7 @@ for i in range(2,page_num+1):
 
 
 df = pd.DataFrame(data)
-df.to_csv('movies.csv')
+df.to_csv('D:\Python Study\FDS\Web Scrapping\daramacool_movies.csv')
 
 print("Task Completed!!!")
 
