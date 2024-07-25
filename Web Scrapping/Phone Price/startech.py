@@ -25,6 +25,8 @@ for product in items:
         except:
             base = product.find('div', class_="p-item-price")
             price = base.find('span').text
+            
+    link = product.find('a').get('href')
 
     data.append({
         "Model": model,
@@ -55,6 +57,8 @@ for i in range(2,page_num+1):
             except:
                 base = product.find('div', class_="p-item-price")
                 price = base.find('span').text
+
+        link = product.find('a').get('href')
 
         data.append({
             "Model": model,
