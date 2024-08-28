@@ -30,7 +30,8 @@ for product in items:
 
     data.append({
         "Model": model,
-        "Price": price
+        "Price": price, 
+        "Link" : link
     })
 
 page_num = 7
@@ -62,7 +63,8 @@ for i in range(2,page_num+1):
 
         data.append({
             "Model": model,
-            "Price": price
+            "Price": price, 
+            "Link" : link
         })
 
 
@@ -70,6 +72,6 @@ for i in range(2,page_num+1):
     
 
 df = pd.DataFrame(data)
-df.to_csv("C:\Musfique's Folder\Python\FDS\Web Scrapping\Phone Price\laptop_data.csv", index=False)
+df.to_csv("D:\Python Study\FDS\Web Scrapping\Phone Price\laptop_data.csv", index=False)
 
 print("Task Completed!!!")
