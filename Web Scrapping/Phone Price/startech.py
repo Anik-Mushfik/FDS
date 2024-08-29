@@ -3,7 +3,7 @@ from bs4 import BeautifulSoup
 import pandas as pd
 
 
-r = requests.get('https://www.startech.com.bd/lenovo-laptop')
+r = requests.get('https://www.startech.com.bd/laptop-notebook')
 
 print("Scrapping Page:1......")
 # Parsing the HTML
@@ -34,11 +34,11 @@ for product in items:
         "Link" : link
     })
 
-page_num = 7
+page_num = 15
 
 for i in range(2,page_num+1):
     print(f"Scrapping Page:{i}......")
-    r = requests.get(f'https://www.startech.com.bd/lenovo-laptop?page={i}')
+    r = requests.get(f'https://www.startech.com.bd/laptop-notebook?page={i}')
 
 
     # Parsing the HTML
@@ -72,6 +72,6 @@ for i in range(2,page_num+1):
     
 
 df = pd.DataFrame(data)
-df.to_csv("D:\Python Study\FDS\Web Scrapping\Phone Price\laptop_data.csv", index=False)
+df.to_csv("D:\Python Study\FDS\Web Scrapping\Phone Price\Star_tech_dataseet.csv", index=False)
 
 print("Task Completed!!!")
