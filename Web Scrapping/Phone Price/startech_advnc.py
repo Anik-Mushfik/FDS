@@ -169,7 +169,7 @@ for product in items:
 page_num = 15
 
 for i in range(2,page_num+1):
-    print(f"Scrapping Page:{i}......")
+    print(f"\nScrapping Page:{i}......\n")
     r = requests.get(f'https://www.startech.com.bd/laptop-notebook?page={i}')
 
 
@@ -232,6 +232,6 @@ for i in range(2,page_num+1):
     
 
 df = pd.DataFrame(data)
-df.to_csv("D:\Python Study\FDS\Web Scrapping\Phone Price\laptop_data.csv", index=False)
+df.to_csv("D:\Python Study\FDS\Web Scrapping\Phone Price\laptop_data_2.csv", index=False)
 
 print("Task Completed!!!")

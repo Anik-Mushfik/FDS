@@ -1,0 +1,20 @@
+Name,Age,Gender,Salary,Department,Date of Birth,Address,Product
+Rahim,25.0,Male,50000.0,HR,5/12/1995,Dhaka,widgetA
+Karim,30.0,Male,60000.0,Finance,9/23/1985,Chittagong,WidgetB
+Jamal,35.0,Male,70000.0,Marketing,12/2/1975,Sylhet,widgetA
+Hasina,,Female,80000.0,Finance,4/12/1988,78 Khulna Rd,WidgetC
+Shabana,40.0,Female,,HR,8/14/1990,Barisal,widgetb
+Bashir,29.0,Male,1200000.0,HR,3/19/1982,Rajshahi,widgetA
+Rafiq,33.0,Male,85000.0,Finance,7/21/1989,Rajshahi,WidgetB
+Salma,22.0,Female,90000.0,HR,11/5/1992,Dhaka,widgetA
+Moinul,55.0,Male,300000.0,Finance,6/9/1984,Chittagong,widgetA
+Sadia,36.0,Female,60000.0,Finance,1/20/1993,Comilla,WidgetB
+Nadia,,Female,70000.0,HR,5/12/1995,Chittagong,WidgetC
+Morshed,60.0,Male,25000.0,Marketing,8/3/1981,Rangpur,widgetb
+Taslima,42.0,Female,62000.0,Finance,10/13/1987,Khulna,WidgetA
+Selina,54.0,Female,54000.0,HR,12/24/1976,Sylhet,WidgetC
+Abul,38.0,Male,71000.0,HR,4/12/1988,Khulna,WidgetC
+Nasrin,31.0,Female,68000.0,Finance,3/19/1982,Rajshahi,widgetb
+Asif,27.0,Male,71000.0,Marketing,7/21/1989,Sylhet,widgetC
+Mofiz,,Male,66000.0,Marketing,8/14/1990,Dhaka,WidgetA
+Faruk,41.0,Male,66000.0,HR,9/23/1985,Barisal,WidgetA
